@@ -12,7 +12,21 @@ pleasant auto indentation as editing Go source.
 
 ![screen shot][]
 
-Note: Name of file for goyacc must end with `.go.y`.
+Files whose names end with `.go.y` are detected as a file for goyacc. If you want to detect files
+with your own rule, please write your `autocmd` in your vimrc.
+
+e.g.
+
+```vim
+" All files end with .y are detected as goyacc parser definition file.
+autocmd BufNewFile,BufReadPost *.y setlocal filetype=goyacc
+```
+
+Or write mode line at the bottom of your file as below.
+
+```
+/* vim: ft=goyacc */
+```
 
 
 ## How to Install
