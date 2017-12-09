@@ -5,13 +5,13 @@
 "
 " Options: {{{1
 
-if exists("b:current_syntax")
+if exists('b:current_syntax')
  syntax clear
 endif
 
 " ---------------------------------------------------------------------
 "  Folding Support {{{1
-if has("folding")
+if has('folding')
  com! -nargs=+ SynFold	<args> fold
 else
  com! -nargs=+ SynFold	<args>
@@ -70,7 +70,7 @@ syn sync fromstart
 
 " ---------------------------------------------------------------------
 " Define the default highlighting. {{{1
-if !exists("skip_yacc_syn_inits")
+if !exists('skip_goyacc_syn_inits')
   hi def link goYaccBrkt	goYaccStmt
   hi def link goYaccComment	Comment
   hi def link goYaccCurly	Delimiter
@@ -95,7 +95,7 @@ endif
 " ---------------------------------------------------------------------
 "  Cleanup: {{{1
 delcommand SynFold
-let b:current_syntax = "yacc"
+let b:current_syntax = 'goyacc'
 
 " ---------------------------------------------------------------------
 "  Modelines: {{{1
