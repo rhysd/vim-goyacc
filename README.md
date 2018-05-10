@@ -25,7 +25,7 @@ autocmd BufNewFile,BufReadPost *.y setlocal filetype=goyacc
 Or write mode line at the bottom of your file as below.
 
 ```
-/* vim: ft=goyacc */
+/* vim: set ft=goyacc: */
 ```
 
 
